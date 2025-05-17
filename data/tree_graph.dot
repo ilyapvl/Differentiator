@@ -1,0 +1,22 @@
+digraph G {                
+  tree [shape=box ; stryle=rounded ; label="size : 9"];                
+  edge [color=black];                
+  node [shape=record ; style=rounded ; color=green];
+105827994175120 [label="{+|{<LEFT>LEFT|<RIGHT>RIGHT}}"];
+105827994174800 [label="{+|{<LEFT>LEFT|<RIGHT>RIGHT}}"];
+105827994174672 [label="{sin|{<LEFT>LEFT|<RIGHT>RIGHT}}"];
+105827994175312 [label="{-1}"];
+105827994174736 [label="{x}"];
+105827994174864 [label="{ln|{<LEFT>LEFT|<RIGHT>RIGHT}}"];
+105827994175248 [label="{-1}"];
+105827994174992 [label="{x}"];
+105827994175184 [label="{x}"];
+105827994175120:<LEFT> -> 105827994174800 [color=green];
+105827994174800:<LEFT> -> 105827994174672 [color=green];
+105827994174672:<LEFT> -> 105827994175312 [color=green];
+105827994174672:<RIGHT> -> 105827994174736 [color=red];
+105827994174800:<RIGHT> -> 105827994174864 [color=red];
+105827994174864:<LEFT> -> 105827994175248 [color=green];
+105827994174864:<RIGHT> -> 105827994174992 [color=red];
+105827994175120:<RIGHT> -> 105827994175184 [color=red];
+}
