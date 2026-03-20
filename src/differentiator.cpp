@@ -3,6 +3,7 @@
 #include "optimization.h"
 #include "latex.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 static double ONE = 1.0;
 static double M_ONE = -1.0;
