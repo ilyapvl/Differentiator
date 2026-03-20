@@ -6,7 +6,7 @@ LDFLAGS = $(ASAN)
 SRC_DIR = src
 BUILD_DIR = build
 
-TARGET = diff
+TARGET = main
 
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 
@@ -26,11 +26,11 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
 	@$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
 clean:
-	rm -rf $(BUILD_DIR) $(TARGET)
+	@rm -rf $(BUILD_DIR) $(TARGET)
 
-run: $(TARGET)
-	./$(TARGET) input.txt 3
+pdf:
+	@cd data && pdflatex -interaction=nonstopmode result.tex
 
-.PHONY: all clean run
+.PHONY: all clean pdf
 
 -include $(DEPS)
